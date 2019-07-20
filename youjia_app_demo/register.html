@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+    <script src="jquery/jquery-3.3.1.js"></script>
+    <script src="bs/js/bootstrap.min.js"></script>
+    
+    <title>Document</title>
+    <style>
+      .container{
+        width: 100%;
+        border: 0px solid rgb(214, 212, 212);
+        padding: 0;
+        margin:0;
+      }
+
+      input{
+        width: 90%;
+        margin-top: 30px;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        outline: none;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 20px;
+      }
+
+      ::-webkit-input-placeholder {
+        color: rgb(167, 164, 164);
+        font-size: 15px;
+        }
+
+        button{
+          width: 85%!important;
+          margin:auto;
+          margin-top: 40px;
+        }
+        
+        i{
+            font-size: 2rem;
+            color: #fff;
+        }
+        
+    </style>
+</head>
+<body>
+  <div class="container">
+
+    <form class="form-signin">
+        <div style="position:relative;">
+            <img src="register-head.jpeg" class="img-responsive center-block" >
+            <div style="position:absolute;width:100px;height:20px;z-index:2;left:2%;top:33%;">
+                <a href="login.html"> <i class="glyphicon glyphicon-menu-left"></i></a>
+            </div>
+        </div>
+    
+      
+
+      <input type="text" placeholder="请输入手机号码" required="" autofocus="">
+
+      <input type="text" placeholder="请输入身份证号码">
+      
+      <input type="password" id="inputPassword" placeholder="请输入登录密码 (6-10位数字字母组合密码)" required="">
+
+      <div class="form-group">
+        <div class="col-sm-6">
+            <div class="input-group">
+            <input id='location' class="form-control" onclick="$('#i-file').click();">
+                <label class="input-group-btn">
+                    <input type="button" id="i-check" value="上传照片" class="btn btn-primary" onclick="$('#i-file').click();">
+                </label>
+            </div>
+        </div>
+        <input type="file" name="file" id='i-file'  accept=".xls, .xlsx" onchange="$('#location').val($('#i-file').val());" style="display: none">
+     </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="register()">立即注册</button>
+ 
+    </form>
+
+  </div>
+   
+
+</body>
+<script>
+  function register() {
+    window.location.href = "login.html";
+  }
+  
+  
+</script>
+</html>
